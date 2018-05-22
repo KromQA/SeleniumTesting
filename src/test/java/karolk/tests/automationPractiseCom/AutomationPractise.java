@@ -1,4 +1,4 @@
-package karolk.tests;
+package karolk.tests.automationPractiseCom;
 
 import karolk.BaseTest;
 

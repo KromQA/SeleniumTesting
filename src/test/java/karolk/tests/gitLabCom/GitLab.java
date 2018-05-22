@@ -1,4 +1,4 @@
-package karolk.tests;
+package karolk.tests.gitLabCom;
 
 import karolk.BaseTest;
 
