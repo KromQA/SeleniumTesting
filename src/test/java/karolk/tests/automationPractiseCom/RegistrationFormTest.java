@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class RegistrationFormTest extends BaseTest {
     @Test
-    public void CreateNewAccount() {
+    public void createNewAccount() {
         driver.get("http://automationpractice.com/index.php");
         driver.findElementByCssSelector(".login").click();
         assertEquals("Authentication",
@@ -19,7 +19,7 @@ public class RegistrationFormTest extends BaseTest {
 
 
     @Test
-    public void CreateNewAccountInvalidDetails() {
+    public void createNewAccountInvalidDetails() {
         driver.get("http://automationpractice.com/index.php");
         driver.findElementByCssSelector(".login").click();
         assertEquals("Authentication",
