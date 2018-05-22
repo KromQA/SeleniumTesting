@@ -4,6 +4,8 @@ import org.apache.commons.codec.binary.Base32InputStream;
 import org.junit.BeforeClass;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -11,6 +13,8 @@ import java.util.Properties;
 public class BaseTest {
 
     static protected RemoteWebDriver driver;
+
+    static protected WebDriverWait wait;
 
     @BeforeClass
     public static void setUpDriver() throws IOException {
@@ -22,5 +26,7 @@ public class BaseTest {
                 props.getProperty("driverPath")
         );
         driver = new ChromeDriver();
+
+        wait = new WebDriverWait(driver, 10);
     }
 }
