@@ -16,4 +16,16 @@ public class RegistrationFormTest extends BaseTest {
         driver.findElementById("email_create").sendKeys("asda@gmail.com");
         driver.findElementById("SubmitCreate").click();
     }
+
+
+    @Test
+    public void CreateNewAccountInvalidDetails() {
+        driver.get("http://automationpractice.com/index.php");
+        driver.findElementByCssSelector(".login").click();
+        assertEquals("Authentication",
+                driver.findElementByCssSelector(".navigation_page").getText()
+        );
+        driver.findElementById("email_create").sendKeys("asda");
+        driver.findElementById("SubmitCreate").click();
+    }
 }
