@@ -1,4 +1,4 @@
-package karolk.tests;
+package karolk.tests.VolleyballEnglandOrg;
 
 import com.sun.media.jfxmedia.events.PlayerEvent;
 import karolk.BaseTest;

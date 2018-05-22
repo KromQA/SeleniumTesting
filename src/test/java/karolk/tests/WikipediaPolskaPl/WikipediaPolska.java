@@ -1,4 +1,4 @@
-package karolk.tests;
+package karolk.tests.WikipediaPolskaPl;
 
 import karolk.BaseTest;
 import org.junit.Assert;

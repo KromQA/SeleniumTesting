@@ -1,4 +1,4 @@
-package karolk.tests;
+package karolk.tests.WikiTestCom;
 
 import karolk.BaseTest;
 import org.junit.Test;
