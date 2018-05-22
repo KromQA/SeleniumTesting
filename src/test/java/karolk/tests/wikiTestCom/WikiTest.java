@@ -1,8 +1,7 @@
-package karolk.tests.WikiTestCom;
+package karolk.tests.wikiTestCom;
 
 import karolk.BaseTest;
 import org.junit.Test;
-import org.openqa.selenium.By;
 
 public class WikiTest extends BaseTest {
 

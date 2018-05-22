@@ -1,13 +1,9 @@
-package karolk.tests.WikipediaPolskaPl;
+package karolk.tests.wikipediaPolskaPl;
 
 import karolk.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
-import static org.junit.Assert.*;
-
-
-import java.util.List;
 
 public class WikipediaPolska extends BaseTest {
     @Test

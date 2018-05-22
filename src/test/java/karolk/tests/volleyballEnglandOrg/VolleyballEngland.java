@@ -1,9 +1,7 @@
-package karolk.tests.VolleyballEnglandOrg;
+package karolk.tests.volleyballEnglandOrg;
 
-import com.sun.media.jfxmedia.events.PlayerEvent;
 import karolk.BaseTest;
 import org.junit.Test;
-import org.openqa.selenium.By;
 
 public class VolleyballEngland extends BaseTest {
     @Test
