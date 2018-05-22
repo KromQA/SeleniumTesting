@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebElement;
 
 
-public class AutomationPractise extends BaseTest{
+public class AuthenticationTest extends BaseTest{
     @Test
     public void login(){
         driver.get("http://automationpractice.com/index.php");
