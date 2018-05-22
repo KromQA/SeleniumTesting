@@ -13,7 +13,7 @@ public class RegistrationFormTest extends BaseTest {
         assertEquals("Authentication",
                 driver.findElementByCssSelector(".navigation_page").getText()
         );
-        driver.findElementById("email_create").sendKeys("@gmail.com");
+        driver.findElementById("email_create").sendKeys("deba@gmail.com");
         driver.findElementById("SubmitCreate").click();
     }
 
