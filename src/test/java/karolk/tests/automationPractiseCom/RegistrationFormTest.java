@@ -7,19 +7,19 @@ import static org.junit.Assert.*;
 
 public class RegistrationFormTest extends BaseTest {
     @Test
-    public void createNewAccount() {
+    public void attemptToCreateNewAccount() {
         driver.get("http://automationpractice.com/index.php");
         driver.findElementByCssSelector(".login").click();
         assertEquals("Authentication",
                 driver.findElementByCssSelector(".navigation_page").getText()
         );
-        driver.findElementById("email_create").sendKeys("asda@gmail.com");
+        driver.findElementById("email_create").sendKeys("@gmail.com");
         driver.findElementById("SubmitCreate").click();
     }
 
 
     @Test
-    public void createNewAccountInvalidDetails() {
+    public void attepmptToCreateNewAccountInvalidDetails() {
         driver.get("http://automationpractice.com/index.php");
         driver.findElementByCssSelector(".login").click();
         assertEquals("Authentication",
