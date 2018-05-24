@@ -24,7 +24,7 @@ public class RegistrationFormTest extends BaseTest {
                 driver.findElementByCssSelector(".navigation_page").getText()
         );
         // fill email field
-        driver.findElementById("email_create").sendKeys("debassss@gmail.com");
+        driver.findElementById("email_create").sendKeys("debasssss@gmail.com");
         driver.findElementById("SubmitCreate").click();
         //wait for form to appear
         wait.until(
