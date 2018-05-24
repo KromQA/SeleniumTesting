@@ -72,13 +72,23 @@ public class RegistrationFormTest extends BaseTest {
 
 
     @Test
-    public void attepmptToCreateNewAccountInvalidDetails() {
+    public void attemptToCreateNewAccountInvalidDewithtails() {
         driver.get("http://automationpractice.com/index.php");
         driver.findElementByCssSelector(".login").click();
         assertEquals("Authentication",
                 driver.findElementByCssSelector(".navigation_page").getText()
         );
-        driver.findElementById("email_create").sendKeys("lala");
+        driver.findElementById("email_create").sendKeys("lalalala@gmail.com");
         driver.findElementById("SubmitCreate").click();
+        assertEquals("Authentication",
+                driver.findElementByCssSelector(".navigation_page").getText()
+        );
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.id("submitAccount")
+                )
+        );
+        driver.findElementById("submitAccount").click();
+
     }
 }
