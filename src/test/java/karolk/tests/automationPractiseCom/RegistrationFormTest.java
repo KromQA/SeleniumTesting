@@ -117,14 +117,19 @@ public class RegistrationFormTest extends BaseTest {
 
     @Test
     public void attemptToLogInWithInvalidPassword(){
+        //get to directed webpage
         driver.get("http://automationpractice.com/index.php");
+        //finding right button to log in
         driver.findElementByClassName("login").click();
+        //making sure it's right webpage
         assertEquals("Authentication",
                 driver.findElementByCssSelector(".navigation_page").getText()
         );
+        //find fields, fill them up and submit it
         driver.findElementById("email").sendKeys("aa@gmail.com");
         driver.findElementById("passwd").sendKeys("bb");
         driver.findElementById("SubmitLogin").click();
+        //making sure the error will appear
         assertEquals("There is 1 error",
                 driver.findElementByCssSelector("div.alert-danger p").getText()
         );
