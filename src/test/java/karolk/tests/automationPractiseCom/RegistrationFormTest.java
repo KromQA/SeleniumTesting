@@ -5,6 +5,7 @@ import karolk.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import sun.awt.image.ByteInterleavedRaster;
@@ -100,4 +101,19 @@ public class RegistrationFormTest extends BaseTest {
 
 
     }
+
+
+    @Test
+    public void attemptToLogIn() {
+        driver.get("http://automationpractice.com/index.php");
+        driver.findElementByClassName("login").click();
+        assertEquals("Authentication",
+                driver.findElementByCssSelector(".navigation_page").getText()
+        );
+    driver.findElementById("email").sendKeys("debasssss@gmail.com");
+    driver.findElementById("passwd").sendKeys("12345");
+    driver.findElementById("SubmitLogin").click();
+    }
+
+    
 }
