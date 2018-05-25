@@ -89,6 +89,15 @@ public class RegistrationFormTest extends BaseTest {
                 )
         );
         driver.findElementById("submitAccount").click();
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.className("alert-danger")
+                )
+        );
+        assertEquals("There are 8 errors",
+                driver.findElementByCssSelector("div.alert-danger p").getText()
+        );
+
 
     }
 }
