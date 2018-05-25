@@ -115,5 +115,18 @@ public class RegistrationFormTest extends BaseTest {
     driver.findElementById("SubmitLogin").click();
     }
 
-    
+    @Test
+    public void attemptToLogInWithInvalidPassword(){
+        driver.get("http://automationpractice.com/index.php");
+        driver.findElementByClassName("login").click();
+        assertEquals("Authentication",
+                driver.findElementByCssSelector(".navigation_page").getText()
+        );
+        driver.findElementById("email").sendKeys("aa@gmail.com");
+        driver.findElementById("passwd").sendKeys("bb");
+        driver.findElementById("SubmitLogin").click();
+        assertEquals("There is 1 error",
+                driver.findElementByCssSelector("div.alert-danger p").getText()
+        );
+    }
 }
