@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 public class ContactFormTest extends BaseTest {
     @Test
     public void contactButton() {
+        //open webpage, find button and make sure that's right page
         driver.get("http://automationpractice.com/index.php");
         driver.findElementById("contact-link")
                 .click();
@@ -17,6 +18,7 @@ public class ContactFormTest extends BaseTest {
                 driver.findElementByClassName("navigation_page")
                         .getText()
         );
+        //find feilds and fill them up and submit it
         driver.findElementById("id_contact")
                 .sendKeys("Customer Service");
         driver.findElementById("email")
@@ -27,6 +29,7 @@ public class ContactFormTest extends BaseTest {
                 .sendKeys("aaaaaaaaaaaaaaa");
         driver.findElementById("submitMessage")
                 .click();
+        //double check if it's right page
         assertEquals(
                 "CUSTOMER SERVICE - CONTACT US",
                 driver.findElementByClassName("page-heading")
@@ -37,6 +40,7 @@ public class ContactFormTest extends BaseTest {
 
     @Test
     public void contactButtonInvalidDetails() {
+        //open the webpage, find button, click it and double check if its right page
         driver.get("http://automationpractice.com/index.php");
         driver.findElementById("contact-link")
                 .click();
@@ -45,14 +49,23 @@ public class ContactFormTest extends BaseTest {
                 driver.findElementByClassName("navigation_page")
                         .getText()
         );
-        driver.findElementById("id_contact").sendKeys();
-        driver.findElementById("email").sendKeys("asdas");
-        driver.findElementById("id_order").sendKeys();
-        driver.findElementById("message").sendKeys();
-        driver.findElementById("submitMessage").click();
-        assertEquals("There is 1 error",
-                driver.findElementByCssSelector("div.alert-danger p").getText()
-                );
+        //find fields, fill them up and submit it
+        driver.findElementById("id_contact")
+                .sendKeys();
+        driver.findElementById("email")
+                .sendKeys("asdas");
+        driver.findElementById("id_order")
+                .sendKeys();
+        driver.findElementById("message")
+                .sendKeys();
+        driver.findElementById("submitMessage")
+                .click();
+        //double check if errors show up
+        assertEquals(
+                "There is 1 error",
+                driver.findElementByCssSelector("div.alert-danger p")
+                        .getText()
+        );
     }
 
 }

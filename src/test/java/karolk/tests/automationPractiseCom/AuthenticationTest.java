@@ -8,18 +8,23 @@ import org.junit.Test;
 import org.openqa.selenium.WebElement;
 
 
-public class AuthenticationTest extends BaseTest{
+public class AuthenticationTest extends BaseTest {
     @Test
-    public void login(){
+    public void login() {
         driver.get("http://automationpractice.com/index.php");
-        driver.findElementByCssSelector(".login").click();
+        driver.findElementByCssSelector(".login")
+                .click();
         assertEquals(
                 "Authentication",
-                driver.findElementByCssSelector(".navigation_page").getText()
+                driver.findElementByCssSelector(".navigation_page")
+                        .getText()
         );
-        driver.findElementById("email").sendKeys("asdas@gmail.com");
-        driver.findElementById("passwd").sendKeys("asdasda");
-        driver.findElementById("SubmitLogin").click();
+        driver.findElementById("email")
+                .sendKeys("asdas@gmail.com");
+        driver.findElementById("passwd")
+                .sendKeys("asdasda");
+        driver.findElementById("SubmitLogin")
+                .click();
 
 
     }
