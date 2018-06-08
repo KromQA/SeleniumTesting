@@ -17,6 +17,11 @@ public class ContactFormTest extends BaseTest {
         driver.findElementById("email").sendKeys("asdas@gmail.com");
         driver.findElementById("id_order").sendKeys("blebleble");
         driver.findElementById("message").sendKeys("aaaaaaaaaaaaaaa");
+        driver.findElementById("submitMessage").click();
+        assertEquals("CUSTOMER SERVICE - CONTACT US",
+                driver.findElementByClassName("page-heading").getText()
+                );
     }
-    /* @todo rest of it */
+    
+
 }
