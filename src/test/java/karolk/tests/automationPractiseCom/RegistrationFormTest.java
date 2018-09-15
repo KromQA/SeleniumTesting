@@ -1,6 +1,6 @@
 package karolk.tests.automationPractiseCom;
 
-import javafx.scene.control.RadioButton;
+
 import karolk.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -8,9 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import sun.awt.image.ByteInterleavedRaster;
 
-import java.awt.*;
+
+
 
 import static org.junit.Assert.*;
 
