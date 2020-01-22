@@ -5,6 +5,7 @@ import karolk.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.junit.Assert.*;
@@ -54,6 +55,8 @@ public class RegistrationFormTest extends BaseTest {
                 .click();
         driver.findElementById("optin")
                 .click();
+
+        WebElement elem = driver.findElementById("optin");
         wait.until(
                 ExpectedConditions.visibilityOfElementLocated(
                         By.id("customer_firstname")
